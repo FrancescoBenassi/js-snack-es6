@@ -11,6 +11,8 @@ Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subit
     - Aggiungere le proprietà ai vari oggetti
     - Compilare l'unica proprietà 'nome' e settare tutte le altre a 0
 2) Creare una funzione randomica da riutilizzare
-3) Creare un ciclo per randomizzare i punti fatti
-4) Creare un ciclo per randomizzare i falli subiti
-5) Creare un nuovo array con solo nomi e falli subiti
+3) Creare una costante della lunghezza dell'array da utilizzare durante i cicli
+4) Creare un ciclo per randomizzare i punti fatti
+5) Creare un ciclo per randomizzare i falli subiti
+6) Creare un nuovo array per stamare i nomi e i falli subiti
+7) Eliminare i punti fatti (points)
