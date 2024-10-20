@@ -1,4 +1,8 @@
 // 1) Creare un array con dei valori all'interno
+
+const city = ["Roma", "Napoli", "Firenze", "Milano", "Cesena", "Trento", "Assisi", "Bolzano", "Bergamo", "Piacenza", "Reggio nell'Emilia"]
+console.log(city);
+
 // 2) Variabile per invocare la funzione con tre argomenti (city, number1, number1)
 /* 3) Creare una funzione per stampare i vari elemnti compresi tra i 2 numeri
     - Creare una funzione con tre 3 argomenti
