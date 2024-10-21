@@ -21,7 +21,22 @@ const arrayObject = [{
 }]
 console.log(arrayObject);
 
-// 2) Confrontare i vari pesi degli oggetti e trovare l'oggetto con il peso minore tra di loro
+// 2) Creare una variabile con la lunghezza dell'array
 
-const lowerWeight = Math.min(arrayObject[0].peso, arrayObject[1].peso, arrayObject[2].peso, arrayObject[3].peso);
+const arrayObjectLenght = arrayObject.length;
+
+// 3) Confrontare i vari pesi degli oggetti e trovare l'oggetto con il peso minore tra di loro
+
+lowerWeight = Math.min(arrayObject[0].peso, arrayObject[1].peso, arrayObject[2].peso, arrayObject[3].peso);
 console.log(lowerWeight);
+
+// 4) Creare un ciclo per confrotare il valore minimo con il peso minore delle proprità degli oggetti nell'array 
+// e nel caso si dovessero egugliare stampare in console le proprità di quello oggetto
+
+for (let i = 0; i < arrayObject.length; i++) {
+    if (lowerWeight === arrayObject[i].peso) {
+        console.log(arrayObject[i]);
+    }
+}
+
+
