@@ -5,9 +5,9 @@ const city = ["Roma", "Napoli", "Firenze", "Milano", "Cesena", "Trento", "Assisi
 
 // Variabili per creare number 1 e number 2 random
 
-const numberRandomToProve1 = randomNumber();
+const numberRandomToProve1 = randomNumber(city.length);
 console.log(numberRandomToProve1);
-const numberRandomToProve2 = randomNumber();
+const numberRandomToProve2 = randomNumber(city.length);
 console.log(numberRandomToProve2);
 
 // 2) Variabile per invocare la funzione con tre argomenti (city, number1, number1)
@@ -31,7 +31,6 @@ function result(city, number1, number2) {
 
     for (let i = number1; i <= number2; i++) {
         resultCity.push(city[i]);
-        console.log(resultCity);
     }
 
     //Ciclo da utilizzare nel caso number1 fosse maggiore di b
@@ -39,7 +38,6 @@ function result(city, number1, number2) {
     if (number2 < number1) {
         for (let i = number2; i <= number1; i++) {
             resultCity.push(city[i]);
-            console.log(resultCity);
         }
     }
 
@@ -48,7 +46,7 @@ function result(city, number1, number2) {
 
 // Funzione per creare numeri random da mettere in number1 e number 2
 
-function randomNumber() {
-    let numberRandom = Math.floor(Math.random() * (city.length - 1 + 1));
+function randomNumber(number) {
+    let numberRandom = Math.floor(Math.random() * (number - 1 + 1));
     return numberRandom;
 }
