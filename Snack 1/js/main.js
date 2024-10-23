@@ -17,7 +17,7 @@ const arrayObject = [{
     peso: 60,
 }, {
     nome: 'Bici 4',
-    peso: 80,
+    peso: 50,
 }]
 console.log(arrayObject);
 
@@ -29,14 +29,24 @@ const arrayObjectLenght = arrayObject.length;
 //    - Creare un ciclo per confrotare il valore minimo con il peso minore delle proprietà degli oggetti nell'array 
 //    e nel caso la proprietà degll'oggetto nell'array fosse minore del peso minore stampare quella
 
+let lowerWeight = arrayObject[0];
+
 for (let i = 0; i < arrayObjectLenght; i++) {
-
-    let lowerWeight = arrayObject[0];
-
     if (arrayObject[i].peso < lowerWeight.peso) {
         lowerWeight = arrayObject[i];
         console.log(lowerWeight);
     }
 }
 
+console.log(lowerWeight);
 
+// Nel caso ci fossero 2 o più bici con uguale peso 
+
+let myArray = [];
+
+for (let i = 0; i < arrayObjectLenght; i++){
+    if(lowerWeight.peso === arrayObject[i].peso){
+        myArray.push(arrayObject[i]);
+    }
+}
+console.log(myArray);

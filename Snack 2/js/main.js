@@ -28,44 +28,36 @@ const squad = [{
     points: 0,
     fouls: 0,
 }]
-console.log(squad);
-
-// 2) Creare una funzione randomica da riutilizzare
-
-function numberRandom(number) {
-    return Math.floor(Math.random() * (10 - 1) + 1);
-  }
 
 // 3) Creare una costante della lunghezza dell'array da utilizzare durante i cicli
 
 const squadLenght = squad.length;
 
-// 4) Creare un ciclo per randomizzare i punti fatti
+// 4) Creare un ciclo per randomizzare i punti fatti e per randomizzare i falli subiti
 
-for (let i = 0; i < squadLenght; i++){
-    squad[i].points = numberRandom();
+for (let i = 0; i < squadLenght; i++) { 
+    const team = squad[i];
+    team.points = numberRandom(0, 100);
+    team.fouls = numberRandom(0, 100);
 }
-console.log(squad);
 
+// 5) Creare un nuovo array vuoto dove pusharci nomi e falli subiti
 
-// 5) Creare un ciclo per randomizzare i falli subiti
+const newSquad = [];
 
-for (let i = 0; i < squadLenght; i++){
-    squad[i].fouls = numberRandom();
+// 6) Pushare nel'array newSquad solo nomi e falli subiti
+
+for (let i = 0; i < squadLenght; i++) {
+    newSquad.push({
+        nameSquad: squad[i].nameSquad,
+        fouls: squad[i].fouls
+    })
 }
-console.log(squad);
 
-// 6) Creare un nuovo array con solo nomi e falli subiti
-
-let newSquad = Object.create(squad);
-
-// 7) Eliminare i punti fatti (points)
-
-for (let i = 0; i < squadLenght; i++){
-    delete newSquad[i].points
-}
 console.log(newSquad);
 
+// 2) Creare una funzione randomica da riutilizzare
 
-
-
+function numberRandom(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
